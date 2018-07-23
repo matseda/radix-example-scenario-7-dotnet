@@ -1,0 +1,17 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-example-scenario-1-dotnet
+spec:
+  environments:
+    - name: development
+      authorization:
+      - role: RadixAppAdmin
+        groups:
+        - "g_radix_platform_user"
+  components:
+    - name: "app"
+      src: "."
+      ports:
+        - 5000
+      public: true

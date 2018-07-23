@@ -1,0 +1,11 @@
+version: '3.5'
+ 
+services:
+  radix-example-scenario-1-dotnet:
+    build:
+      context:  .
+      dockerfile: Dockerfile
+    image: radix-example-scenario-1-dotnet
+    container_name: radix-example-scenario-1-dotnet_container
+    ports: 
+      - 8080:5000
